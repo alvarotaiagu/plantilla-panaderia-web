@@ -57,6 +57,21 @@ abajo), las burbujas crecen, el pan pasa y se parte, los pasos se apilan como ho
 7. **Botones magnéticos** y **cursor** que engorda y cambia de texto por zona.
 8. **Contadores** que suben al entrar en pantalla.
 
+## Rendimiento medido
+
+El hero es un canvas vivo, así que se midió con `PerformanceObserver` de `longtask`
+(Chromium, 1440×900), no mirando los FPS:
+
+- **Al arrancar (primeros 3 s): 4 tareas largas, la peor de 145 ms.** Son GSAP y la
+  webfont, no el canvas: es el patrón conocido de las cargas con CDN.
+- **Rodando (≈25 s con el canvas animando, subiendo y bajando la página): 0 tareas
+  largas.** Es la prueba de que cachear la burbuja como sprite y pintarla con
+  `drawImage` funciona: si el degradado radial se recalculara por fotograma, aquí
+  saldrían decenas.
+
+Para repetir la medida hace falta observar `longtask` **antes** de cargar la página
+(`addInitScript`), o las entradas del arranque se pierden.
+
 ## Cómo reskinearlo a un cliente real
 
 Todo lo específico del negocio está agrupado; no hay que tocar el motor.
