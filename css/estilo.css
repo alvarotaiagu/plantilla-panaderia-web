@@ -170,9 +170,9 @@ a { color: inherit; }
   position: absolute; inset: 0; width: 100%; height: 100%;
   z-index: 0; pointer-events: none;
 }
-.hero__cuerpo { position: relative; z-index: 2; max-width: 30ch; }
+.hero__cuerpo { position: relative; z-index: 2; max-width: 34ch; }
 .hero__titulo {
-  font-size: clamp(2.7rem, 1rem + 7.6vw, 7.4rem);
+  font-size: clamp(2.5rem, 1.1rem + 4.6vw, 5.1rem);
   margin-bottom: 1.4rem;
 }
 .hero__entrada { color: var(--tinta-70); max-width: 40ch; font-size: 1.05em; }
@@ -311,9 +311,9 @@ a { color: inherit; }
   will-change: transform;
 }
 .corte {
-  width: min(78vw, 40rem);
+  width: min(80vw, 46rem);
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(1rem, 2.4vw, 2rem);
   background: var(--crema);
@@ -702,7 +702,25 @@ a { color: inherit; }
   .paso img { grid-column: 2; justify-self: start; max-width: 11rem; }
   .trigo { grid-template-columns: 1fr; }
   .trigo__nota { grid-column: 1; }
-  .corte { grid-template-columns: 1fr; width: min(86vw, 30rem); }
+
+  /* En pantalla estrecha la tarjeta tiene que caber de una vez en el alto:
+     la lámina se reduce y la ficha se aprieta. */
+  .corte {
+    grid-template-columns: 1fr;
+    width: min(84vw, 28rem);
+    gap: 0.6rem;
+    padding: 1.1rem 1.2rem;
+    align-content: start;
+  }
+  .corte img { max-width: 13rem; margin: 0 auto; }
+  .corte__ficha h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+  .corte__ficha dl { gap: 0.15rem; margin-bottom: 0.6rem; }
+  .corte__ficha dd { font-size: 0.86em; }
+  .corte__ficha > p { font-size: 0.86em; }
+
+  .cortes__cabeza { grid-template-columns: 1fr; }
+  .cortes__cabeza .cortes__contador { grid-column: 1; grid-row: auto; }
+  .cortes__pin { justify-content: flex-start; gap: 1.2rem; }
 }
 
 @media (max-width: 620px) {

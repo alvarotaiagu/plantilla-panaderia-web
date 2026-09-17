@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Tarro de masa madre con burbujas subiendo">
+  <title>La madre: tarro de masa madre en plena actividad</title>
+  <g fill="none" stroke="#22160D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 62h92l-6 18c-2 6-2 9 2 13l16 18c6 7 9 15 9 24v104c0 8-6 14-14 14H97c-8 0-14-6-14-14V135c0-9 3-17 9-24l16-18c4-4 4-7 2-13z"/>
+    <path d="M96 66h108"/>
+    <path d="M85 174c14-8 24 4 38 4s22-12 36-12 22 10 34 10 18-4 24-8"/>
+  </g>
+  <g fill="#DA3618" opacity="0.9">
+    <circle cx="120" cy="206" r="11"/>
+    <circle cx="152" cy="228" r="7"/>
+    <circle cx="180" cy="202" r="14"/>
+    <circle cx="204" cy="234" r="6"/>
+    <circle cx="140" cy="250" r="9"/>
+    <circle cx="176" cy="258" r="5"/>
+    <circle cx="108" cy="236" r="5"/>
+  </g>
+  <g fill="none" stroke="#DA3618" stroke-width="5" stroke-linecap="round">
+    <path d="M150 44c0-8 8-8 8-16s-8-8-8-16"/>
+    <path d="M186 40c0-6 6-6 6-12s-6-6-6-12"/>
+    <path d="M116 40c0-6 6-6 6-12s-6-6-6-12"/>
+  </g>
+  <g fill="none" stroke="#22160D" stroke-width="4" stroke-linecap="round" opacity="0.5">
+    <path d="M62 136H44"/><path d="M62 172H36"/><path d="M62 208H44"/>
+    <path d="M44 136v72"/>
+  </g>
+</svg>

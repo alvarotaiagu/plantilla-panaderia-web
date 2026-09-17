@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Bola de masa sobre la mesa de trabajo junto a una rasqueta">
+  <title>Amasado: la masa sobre el marmol y la rasqueta de panadero</title>
+  <path d="M62 228c0-52 36-88 88-88s88 36 88 88z" fill="#DA3618" fill-opacity="0.13"/>
+  <g fill="none" stroke="#22160D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 228c0-52 36-88 88-88s88 36 88 88"/>
+    <path d="M24 228h252"/>
+    <path d="M44 228l-10 34"/><path d="M256 228l10 34"/>
+  </g>
+  <g fill="none" stroke="#22160D" stroke-width="4" stroke-linecap="round" opacity="0.6">
+    <path d="M96 208c16-14 26-4 42-16"/>
+    <path d="M118 224c20-12 26-30 48-32"/>
+    <path d="M162 216c14-6 20-16 34-18"/>
+  </g>
+  <g fill="none" stroke="#DA3618" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-14 240 120)">
+    <path d="M200 100h80v52h-80z"/>
+    <path d="M194 88h92c5 0 8 3 8 7s-3 7-8 7h-92c-5 0-8-3-8-7s3-7 8-7z"/>
+  </g>
+  <g fill="#22160D">
+    <circle cx="86" cy="104" r="4"/><circle cx="110" cy="84" r="3"/><circle cx="66" cy="132" r="3"/>
+    <circle cx="132" cy="96" r="4"/><circle cx="158" cy="76" r="3"/><circle cx="98" cy="60" r="3"/>
+  </g>
+</svg>

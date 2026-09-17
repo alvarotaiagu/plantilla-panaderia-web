@@ -492,11 +492,11 @@
       }
 
       tarjetas.forEach(function (t) {
-        var es = p && p.hoy && enTexto(p.minuto) === t.getAttribute('data-hornada');
+        var es = p && enTexto(p.minuto) === t.getAttribute('data-hornada');
         t.classList.toggle('es-proxima', !!es);
         var marca = $('[data-hornada-estado]', t);
         if (!marca) return;
-        if (es) marca.textContent = 'Es la próxima de hoy';
+        if (es) marca.textContent = p.hoy ? 'Es la próxima de hoy' : 'La próxima: ' + DIAS[p.dia];
         else {
           var propia = t.getAttribute('data-hornada').split(':');
           var minuto = parseInt(propia[0], 10) * 60 + parseInt(propia[1], 10);

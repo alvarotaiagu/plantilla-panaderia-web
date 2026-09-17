@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Cuchilla de panadero trazando el corte sobre una hogaza">
+  <title>Grenado: la cuchilla abre la hogaza antes del horno</title>
+  <path d="M44 250c0-62 46-106 106-106s106 44 106 106z" fill="#22160D" fill-opacity="0.08"/>
+  <g fill="none" stroke="#22160D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M44 250c0-62 46-106 106-106s106 44 106 106z"/>
+  </g>
+  <path d="M92 216c22-30 46-44 74-44s48 12 62 32" fill="none" stroke="#DA3618" stroke-width="7" stroke-linecap="round"/>
+  <path d="M84 234c26-38 54-54 86-54" fill="none" stroke="#DA3618" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+  <g fill="none" stroke="#22160D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M184 106l56-56 16 16-56 56z"/>
+    <path d="M178 112l22 22"/>
+    <path d="M170 120l-22 22"/>
+  </g>
+  <g fill="none" stroke="#22160D" stroke-width="4" stroke-linecap="round" opacity="0.45">
+    <path d="M250 82l14-14"/><path d="M262 98l18-8"/>
+  </g>
+</svg>
