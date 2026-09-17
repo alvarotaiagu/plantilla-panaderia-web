@@ -1,0 +1,612 @@
+<!doctype html>
+<!--
+  ============================================================================
+  SITIO DE DEMOSTRACIÓN. «Milmigas, obrador de pan» es un negocio FICTICIO,
+  inventado para esta plantilla. Nombre, dirección, teléfono, horarios,
+  precios, equipo y opiniones son datos de muestra y no corresponden a ningún
+  negocio real. No indexar, no citar como fuente.
+  Concepto: «La miga».
+  ============================================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Milmigas · obrador de pan de masa madre (demostración)</title>
+<meta name="description" content="Plantilla de demostración para panadería y obrador. Milmigas es un negocio ficticio: masa madre, tres hornadas al día y pan de fermentación larga.">
+<meta name="theme-color" content="#F3EADB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Milmigas · obrador de pan (sitio de demostración)">
+<meta property="og:description" content="Negocio ficticio. Plantilla de panadería con concepto «La miga»: la estructura del pan como lenguaje visual.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,700;12..96,75..100,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Martian+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/estilo.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Milmigas",
+  "description": "Obrador de pan de masa madre y fermentación larga. Negocio ficticio usado como demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa da Fornalla, 7",
+    "postalCode": "15004",
+    "addressLocality": "A Coruña",
+    "addressRegion": "A Coruña",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34981000012",
+  "email": "hola@milmigas.example",
+  "priceRange": "€",
+  "openingHours": ["Tu-Fr 07:30-14:00", "Tu-Fr 17:00-20:00", "Sa 08:00-14:30", "Su 09:00-14:00"],
+  "isAccessibleForFree": false,
+  "disambiguatingDescription": "Negocio ficticio. Sitio de demostración."
+}
+</script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<div class="cursor" aria-hidden="true" data-cursor>
+  <span class="cursor__punto"></span>
+  <span class="cursor__texto"></span>
+</div>
+
+<header class="cabecera" data-cabecera>
+  <a class="marca" href="#inicio" aria-label="Milmigas, inicio">
+    <svg class="marca__simbolo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
+      <g fill="currentColor">
+        <circle cx="17" cy="19" r="4.2"/><circle cx="29" cy="16" r="2.6"/><circle cx="32" cy="26" r="4.8"/>
+        <circle cx="20" cy="31" r="3.4"/><circle cx="27" cy="34" r="2"/><circle cx="12" cy="28" r="2.2"/>
+        <circle cx="24" cy="24" r="1.6"/>
+      </g>
+    </svg>
+    <span class="marca__texto">Milmigas</span>
+  </a>
+
+  <button class="hamburguesa" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-boton>
+    <span class="hamburguesa__lineas" aria-hidden="true"><i></i><i></i></span>
+    <span class="hamburguesa__texto">Menú</span>
+  </button>
+
+  <nav class="nav" id="menu-principal" aria-label="Navegación principal" data-menu>
+    <ul>
+      <li><a href="#hornadas">Hornadas</a></li>
+      <li><a href="#cortes">Cortes</a></li>
+      <li><a href="#masa">72 horas</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#obrador">Obrador</a></li>
+      <li><a href="#visita">Visítanos</a></li>
+    </ul>
+    <a class="boton boton--tinta nav__cta" href="#encargo">Encargar pan</a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+  <!-- ══════════ HERO: la masa fermenta ══════════ -->
+  <section class="hero" id="inicio">
+    <canvas class="hero__canvas" data-fermento aria-hidden="true"></canvas>
+    <div class="hero__cuerpo">
+      <p class="kicker" data-reveal-linea>Obrador de masa madre · A Coruña · desde 2019</p>
+      <h1 class="hero__titulo" data-char>Pan que tarda tres días<br>en estar listo</h1>
+      <p class="hero__entrada" data-reveal-linea>
+        Harina, agua, sal y tiempo. Sin levadura industrial, sin mejorantes y sin prisa:
+        aquí la miga se gana durante dos noches de frío.
+      </p>
+      <div class="hero__acciones">
+        <a class="boton boton--rojo" href="#hornadas" data-iman>Ver la hornada de hoy</a>
+        <a class="boton boton--linea" href="#encargo" data-iman>Encargar para mañana</a>
+      </div>
+    </div>
+
+    <div class="reloj" data-reloj>
+      <span class="reloj__etiqueta">Próxima hornada</span>
+      <span class="reloj__hora" data-reloj-hora>—</span>
+      <span class="reloj__cuenta" data-reloj-cuenta>calculando…</span>
+    </div>
+
+    <figure class="hero__foto">
+      <img src="assets/foto/w800/miga.jpg"
+           srcset="assets/foto/w800/miga.jpg 800w, assets/foto/w1600/miga.jpg 1600w"
+           sizes="(max-width: 900px) 60vw, 26vw"
+           width="1600" height="2846"
+           alt="Rebanada de pan de masa madre vista de cerca: la miga está llena de alvéolos irregulares.">
+      <figcaption>La miga de la hogaza de hoy</figcaption>
+    </figure>
+  </section>
+
+  <!-- ══════════ MARQUESINA ══════════ -->
+  <div class="marquesina" data-marquesina aria-hidden="true">
+    <div class="marquesina__pista" data-marquesina-pista>
+      <span>masa madre de 2019</span><span class="marquesina__punto"></span>
+      <span>18 horas de frío</span><span class="marquesina__punto"></span>
+      <span>trigo del país</span><span class="marquesina__punto"></span>
+      <span>horno de suelo de piedra</span><span class="marquesina__punto"></span>
+      <span>cero levadura industrial</span><span class="marquesina__punto"></span>
+      <span>masa madre de 2019</span><span class="marquesina__punto"></span>
+      <span>18 horas de frío</span><span class="marquesina__punto"></span>
+      <span>trigo del país</span><span class="marquesina__punto"></span>
+      <span>horno de suelo de piedra</span><span class="marquesina__punto"></span>
+      <span>cero levadura industrial</span><span class="marquesina__punto"></span>
+    </div>
+  </div>
+  <p class="visualmente-oculta">Milmigas trabaja con masa madre desde 2019, fermentaciones de 18 horas en frío, trigo del país y horno de suelo de piedra.</p>
+
+  <!-- ══════════ HORNADAS ══════════ -->
+  <section class="hornadas" id="hornadas" aria-labelledby="t-hornadas">
+    <div class="seccion__cabeza">
+      <p class="indice">01 — Hornadas</p>
+      <h2 id="t-hornadas" data-char>Tres veces al día se abre el horno</h2>
+      <p class="seccion__texto">
+        No horneamos por la noche para tenerlo todo listo a las siete. Horneamos tres veces,
+        y el pan sale a la tienda cuando termina de cantar. Por eso a media mañana huele
+        distinto que a primera hora.
+      </p>
+    </div>
+
+    <ol class="hornadas__lista">
+      <li class="hornada" data-hornada="07:30">
+        <p class="hornada__hora"><span>07</span><i>:</i><span>30</span></p>
+        <h3>La primera</h3>
+        <p class="hornada__que">Barras de 18 horas, chapatas de aceite y la hogaza grande.</p>
+        <p class="hornada__nota">Es la hornada que se lleva la gente que entra a trabajar. Hacia las nueve ya vuela.</p>
+        <span class="hornada__estado" data-hornada-estado></span>
+      </li>
+      <li class="hornada" data-hornada="11:00">
+        <p class="hornada__hora"><span>11</span><i>:</i><span>00</span></p>
+        <h3>La de media mañana</h3>
+        <p class="hornada__que">Centeno con semillas, trigo del país y toda la bollería de mantequilla.</p>
+        <p class="hornada__nota">La única con caracolas de canela. Se hacen treinta y no hacemos más.</p>
+        <span class="hornada__estado" data-hornada-estado></span>
+      </li>
+      <li class="hornada" data-hornada="17:30">
+        <p class="hornada__hora"><span>17</span><i>:</i><span>30</span></p>
+        <h3>La de la tarde</h3>
+        <p class="hornada__que">Hogaza pequeña, broa de maíz y empanada del día.</p>
+        <p class="hornada__nota">Pensada para la cena: sale a las cinco y media y aguanta tierna hasta el domingo.</p>
+        <span class="hornada__estado" data-hornada-estado></span>
+      </li>
+    </ol>
+
+    <p class="hornadas__pie">
+      Martes a viernes. Los sábados juntamos la primera y la de media mañana a las 08:00,
+      y los domingos solo horneamos una vez, a las 09:00. Los lunes descansa la madre y descansamos nosotros.
+    </p>
+  </section>
+
+  <!-- ══════════ CORTES: galería anclada ══════════ -->
+  <section class="cortes" id="cortes" aria-labelledby="t-cortes" data-cortes>
+    <div class="cortes__pin">
+      <div class="cortes__cabeza">
+        <p class="indice">02 — Cortes</p>
+        <h2 id="t-cortes">Se entiende un pan<br>cuando se parte</h2>
+        <p class="cortes__contador"><span data-corte-n>01</span><i>/</i>06</p>
+        <div class="cortes__barra" aria-hidden="true"><span data-corte-barra></span></div>
+      </div>
+
+      <ul class="cortes__pista" data-cortes-pista>
+        <li class="corte">
+          <img src="assets/cortes/corte-hogaza.svg" width="400" height="300" alt="Ilustración del corte de la hogaza Milmigas: alvéolos grandes e irregulares.">
+          <div class="corte__ficha">
+            <h3>Hogaza Milmigas</h3>
+            <dl>
+              <div><dt>Harina</dt><dd>Trigo T80 + 15 % centeno</dd></div>
+              <div><dt>Fermentación</dt><dd>4 h en bloque + 18 h a 6 ºC</dd></div>
+              <div><dt>Peso</dt><dd>1 kg</dd></div>
+              <div><dt>Precio</dt><dd>4,80 €</dd></div>
+            </dl>
+            <p>Alvéolo grande y brillante, corteza gruesa y un punto ácido al final. Es la que más se vende y la que más tarda.</p>
+          </div>
+        </li>
+        <li class="corte">
+          <img src="assets/cortes/corte-centeno.svg" width="400" height="300" alt="Ilustración del corte del pan de centeno: miga densa, alvéolos pequeños y regulares.">
+          <div class="corte__ficha">
+            <h3>Centeno 100 %</h3>
+            <dl>
+              <div><dt>Harina</dt><dd>Centeno integral molido a la piedra</dd></div>
+              <div><dt>Fermentación</dt><dd>24 h en molde</dd></div>
+              <div><dt>Peso</dt><dd>750 g</dd></div>
+              <div><dt>Precio</dt><dd>5,40 €</dd></div>
+            </dl>
+            <p>Miga compacta, casi húmeda, con lino y girasol. Se corta fino y dura una semana envuelto en un paño.</p>
+          </div>
+        </li>
+        <li class="corte">
+          <img src="assets/cortes/corte-chapata.svg" width="400" height="300" alt="Ilustración del corte de la chapata: alvéolos muy grandes y abiertos.">
+          <div class="corte__ficha">
+            <h3>Chapata de aceite</h3>
+            <dl>
+              <div><dt>Harina</dt><dd>Trigo de fuerza, 78 % de hidratación</dd></div>
+              <div><dt>Fermentación</dt><dd>20 h en frío, sin desgasificar</dd></div>
+              <div><dt>Peso</dt><dd>320 g</dd></div>
+              <div><dt>Precio</dt><dd>2,30 €</dd></div>
+            </dl>
+            <p>La más agujereada del mostrador. Lleva aceite de Quiroga en la masa y se abre sola al partirla.</p>
+          </div>
+        </li>
+        <li class="corte">
+          <img src="assets/cortes/corte-barra.svg" width="400" height="300" alt="Ilustración del corte de la barra fermentada 18 horas: alvéolos medianos alargados.">
+          <div class="corte__ficha">
+            <h3>Barra de 18 horas</h3>
+            <dl>
+              <div><dt>Harina</dt><dd>Trigo T65</dd></div>
+              <div><dt>Fermentación</dt><dd>18 h a 6 ºC</dd></div>
+              <div><dt>Peso</dt><dd>250 g</dd></div>
+              <div><dt>Precio</dt><dd>1,60 €</dd></div>
+            </dl>
+            <p>La barra de cada día, pero con una noche entera detrás. Crujiente a la salida y todavía buena a la hora de cenar.</p>
+          </div>
+        </li>
+        <li class="corte">
+          <img src="assets/cortes/corte-broa.svg" width="400" height="300" alt="Ilustración del corte de la broa de maíz: miga amarilla de alvéolo muy fino.">
+          <div class="corte__ficha">
+            <h3>Broa de maíz</h3>
+            <dl>
+              <div><dt>Harina</dt><dd>Maíz del país 70 % + centeno 30 %</dd></div>
+              <div><dt>Fermentación</dt><dd>6 h con masa madre de centeno</dd></div>
+              <div><dt>Peso</dt><dd>900 g</dd></div>
+              <div><dt>Precio</dt><dd>3,60 €</dd></div>
+            </dl>
+            <p>Miga amarilla, dulce y apretada, corteza gruesa. Se hornea solo en la hornada de la tarde.</p>
+          </div>
+        </li>
+        <li class="corte">
+          <img src="assets/cortes/corte-trigo-pais.svg" width="400" height="300" alt="Ilustración del corte del pan de trigo del país: alvéolos medianos, miga color crema.">
+          <div class="corte__ficha">
+            <h3>Trigo del país</h3>
+            <dl>
+              <div><dt>Harina</dt><dd>Callobre, molida en Ponte Carreira</dd></div>
+              <div><dt>Fermentación</dt><dd>3 h + 16 h a 6 ºC</dd></div>
+              <div><dt>Peso</dt><dd>800 g</dd></div>
+              <div><dt>Precio</dt><dd>4,20 €</dd></div>
+            </dl>
+            <p>Trigo de una variedad vieja que compramos a un molino de Frades. Sabe a cereal tostado y hace muy buena tostada.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="cortes__ayuda">Desliza para recorrer los seis cortes</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 72 HORAS: sticky stack ══════════ -->
+  <section class="masa" id="masa" aria-labelledby="t-masa">
+    <div class="masa__intro">
+      <p class="indice">03 — 72 horas</p>
+      <h2 id="t-masa" data-char>Lo que pasa entre el lunes y el jueves</h2>
+      <p class="seccion__texto">
+        Cinco pasos y mucha espera. Contado sin misterio, porque el pan no lo tiene:
+        lo único que hace falta es tiempo y una temperatura que no cambie.
+      </p>
+    </div>
+
+    <ol class="pila" data-pila>
+      <li class="pila__item">
+        <article class="paso">
+          <p class="paso__num">01</p>
+          <div class="paso__texto">
+            <h3>Refrescar la madre</h3>
+            <p class="paso__hora">Lunes, 17:00</p>
+            <p>La masa madre lleva viva desde marzo de 2019, de un bote de harina de centeno y agua de la traída. Se refresca dos veces al día con la misma harina con la que se va a hornear, para que no le cambie el carácter.</p>
+            <p class="paso__dato"><span>12 h</span> hasta que triplica</p>
+          </div>
+          <img src="assets/proceso/paso-1.svg" width="300" height="300" alt="Ilustración de un tarro de masa madre con burbujas subiendo." loading="lazy">
+        </article>
+      </li>
+      <li class="pila__item">
+        <article class="paso">
+          <p class="paso__num">02</p>
+          <div class="paso__texto">
+            <h3>Amasar poco</h3>
+            <p class="paso__hora">Martes, 06:00</p>
+            <p>Autólisis de una hora, la sal al final y tres pliegues de media hora. Cuanto menos se amasa, más sabor queda; la fuerza se la da el reposo, no la máquina.</p>
+            <p class="paso__dato"><span>75 %</span> de hidratación</p>
+          </div>
+          <img src="assets/proceso/paso-2.svg" width="300" height="300" alt="Ilustración de una bola de masa sobre la mesa junto a una rasqueta." loading="lazy">
+        </article>
+      </li>
+      <li class="pila__item">
+        <article class="paso">
+          <p class="paso__num">03</p>
+          <div class="paso__texto">
+            <h3>Dormirla en frío</h3>
+            <p class="paso__hora">Martes, 13:00</p>
+            <p>Al cesto y a la cámara a 6 ºC. Aquí no crece casi nada: lo que ocurre es que la fermentación se vuelve lenta y aparecen los ácidos que luego se notan en la corteza.</p>
+            <p class="paso__dato"><span>18 h</span> a 6 ºC</p>
+          </div>
+          <img src="assets/proceso/paso-3.svg" width="300" height="300" alt="Ilustración de un cesto de fermentación en espiral dentro de la cámara de frío." loading="lazy">
+        </article>
+      </li>
+      <li class="pila__item">
+        <article class="paso">
+          <p class="paso__num">04</p>
+          <div class="paso__texto">
+            <h3>Abrirla con la cuchilla</h3>
+            <p class="paso__hora">Miércoles, 06:40</p>
+            <p>El corte no es decoración: decide por dónde revienta el pan. Uno solo, inclinado y sin dudar, hecho con la masa fría recién sacada de la cámara.</p>
+            <p class="paso__dato"><span>30°</span> de inclinación</p>
+          </div>
+          <img src="assets/proceso/paso-4.svg" width="300" height="300" alt="Ilustración de una cuchilla de panadero trazando el corte sobre una hogaza." loading="lazy">
+        </article>
+      </li>
+      <li class="pila__item">
+        <article class="paso">
+          <p class="paso__num">05</p>
+          <div class="paso__texto">
+            <h3>Horno de suelo</h3>
+            <p class="paso__hora">Miércoles, 07:00</p>
+            <p>Vapor los primeros doce minutos y después boca abierta para que seque. Cuando sale, el pan cruje solo al enfriarse: eso es lo que en el obrador llamamos «cantar».</p>
+            <p class="paso__dato"><span>250 ºC</span> los primeros 12 min</p>
+          </div>
+          <img src="assets/proceso/paso-5.svg" width="300" height="300" alt="Ilustración de la boca del horno de piedra con vapor saliendo." loading="lazy">
+        </article>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ══════════ BANDA DE FOTO ══════════ -->
+  <section class="banda" aria-label="El obrador">
+    <figure class="banda__figura">
+      <img src="assets/foto/w800/manos.jpg"
+           srcset="assets/foto/w800/manos.jpg 800w, assets/foto/w1600/manos.jpg 1600w"
+           sizes="(max-width: 900px) 92vw, 46vw"
+           width="1600" height="1067" loading="lazy"
+           alt="Manos de panadero trabajando una masa sobre la mesa enharinada.">
+      <figcaption>Plegado del martes, antes de que la masa entre en frío.</figcaption>
+    </figure>
+    <figure class="banda__figura">
+      <img src="assets/foto/w800/obrador.jpg"
+           srcset="assets/foto/w800/obrador.jpg 800w, assets/foto/w1600/obrador.jpg 1600w"
+           sizes="(max-width: 900px) 92vw, 46vw"
+           width="1600" height="1446" loading="lazy"
+           alt="Interior de un obrador con estanterías de madera llenas de hogazas recién horneadas.">
+      <figcaption>Las tablas de enfriado, al fondo del obrador.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ══════════ CARTA ══════════ -->
+  <section class="carta" id="carta" aria-labelledby="t-carta">
+    <div class="seccion__cabeza seccion__cabeza--carta">
+      <p class="indice">04 — Carta</p>
+      <h2 id="t-carta" data-char>Todo lo que sale del horno</h2>
+      <p class="seccion__texto">Precios de mostrador, IVA incluido. Lo que se acaba, se acabó: no se repone hasta la hornada siguiente.</p>
+    </div>
+
+    <div class="carta__rejilla">
+      <div class="carta__bloque">
+        <h3>Panes de masa madre</h3>
+        <ul>
+          <li><span class="carta__nombre">Hogaza Milmigas <em>1 kg</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">4,80 €</span></li>
+          <li><span class="carta__nombre">Media hogaza <em>500 g</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">2,70 €</span></li>
+          <li><span class="carta__nombre">Centeno 100 % con semillas</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">5,40 €</span></li>
+          <li><span class="carta__nombre">Trigo del país <em>800 g</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">4,20 €</span></li>
+          <li><span class="carta__nombre">Chapata de aceite</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">2,30 €</span></li>
+          <li><span class="carta__nombre">Broa de maíz <em>tarde</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">3,60 €</span></li>
+          <li><span class="carta__nombre">Barra de 18 horas</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">1,60 €</span></li>
+        </ul>
+      </div>
+
+      <div class="carta__bloque">
+        <h3>Bollería de mantequilla</h3>
+        <ul>
+          <li><span class="carta__nombre">Croissant</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">1,90 €</span></li>
+          <li><span class="carta__nombre">Caracola de canela</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">2,40 €</span></li>
+          <li><span class="carta__nombre">Napolitana de chocolate</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">2,10 €</span></li>
+          <li><span class="carta__nombre">Bollo suizo</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">1,70 €</span></li>
+          <li><span class="carta__nombre">Trenza de almendra <em>fin de semana</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">2,60 €</span></li>
+        </ul>
+      </div>
+
+      <div class="carta__bloque">
+        <h3>Dulce de obrador</h3>
+        <ul>
+          <li><span class="carta__nombre">Tarta de Santiago <em>ración</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">3,20 €</span></li>
+          <li><span class="carta__nombre">Bica de Trives <em>ración</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">2,80 €</span></li>
+          <li><span class="carta__nombre">Roscón de yema <em>por encargo</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">16,00 €</span></li>
+          <li><span class="carta__nombre">Galleta de centeno y naranja</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">1,20 €</span></li>
+        </ul>
+      </div>
+
+      <div class="carta__bloque">
+        <h3>Salado</h3>
+        <ul>
+          <li><span class="carta__nombre">Empanada de zorza <em>ración</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">3,60 €</span></li>
+          <li><span class="carta__nombre">Empanada de maíz y berberechos <em>ración</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">3,90 €</span></li>
+          <li><span class="carta__nombre">Focaccia de tomate</span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">2,60 €</span></li>
+          <li><span class="carta__nombre">Bocado de masa madre con queso <em>unidad</em></span><span class="carta__puntos" aria-hidden="true"></span><span class="carta__precio">1,80 €</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="carta__foto">
+      <img src="assets/foto/w800/barras.jpg"
+           srcset="assets/foto/w800/barras.jpg 800w, assets/foto/w1600/barras.jpg 1600w"
+           sizes="(max-width: 900px) 92vw, 44vw"
+           width="1600" height="1335" loading="lazy"
+           alt="Tres panes alargados enharinados y greñados sobre una superficie oscura, vistos desde arriba.">
+      <figcaption>Las barras de 18 horas, recién greñadas.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ══════════ OBRADOR: cifras y gente ══════════ -->
+  <section class="obrador" id="obrador" aria-labelledby="t-obrador">
+    <div class="seccion__cabeza">
+      <p class="indice">05 — Obrador</p>
+      <h2 id="t-obrador" data-char>Cuatro personas y una madre de seis años</h2>
+    </div>
+
+    <ul class="cifras">
+      <li><span class="cifra" data-contador="7" data-sufijo="">0</span><span class="cifra__pie">variedades de pan cada semana</span></li>
+      <li><span class="cifra" data-contador="18" data-sufijo=" h">0</span><span class="cifra__pie">de fermentación mínima</span></li>
+      <li><span class="cifra" data-contador="160" data-sufijo=" kg">0</span><span class="cifra__pie">de harina a la semana</span></li>
+      <li><span class="cifra" data-contador="3" data-sufijo="">0</span><span class="cifra__pie">molinos gallegos que nos surten</span></li>
+    </ul>
+
+    <div class="gente">
+      <article class="gente__ficha">
+        <p class="gente__papel">Panadera y fundadora</p>
+        <h3>Nuria Abelenda</h3>
+        <p>Dejó la cocina de un hotel en 2019 para montar el obrador con dos sacos de harina y un bote de masa madre. Amasa los martes y los jueves.</p>
+      </article>
+      <article class="gente__ficha">
+        <p class="gente__papel">Hornero</p>
+        <h3>Xoán Presedo</h3>
+        <p>Lleva el horno desde el primer día. Es quien decide si una hogaza sale a las siete o aguanta cinco minutos más.</p>
+      </article>
+      <article class="gente__ficha">
+        <p class="gente__papel">Bollería</p>
+        <h3>Leda Rouco</h3>
+        <p>Laminado, croissants y caracolas. Entra a las cuatro y media, cuando la mantequilla todavía está dura.</p>
+      </article>
+      <article class="gente__ficha">
+        <p class="gente__papel">Mostrador</p>
+        <h3>Brais Canedo</h3>
+        <p>Se sabe de memoria el pan que lleva cada cliente. Si preguntas qué llevarte, te va a preguntar qué vas a cenar.</p>
+      </article>
+    </div>
+
+    <div class="trigo">
+      <h3>De dónde viene la harina</h3>
+      <ul>
+        <li><strong>Molino de Ponte Carreira</strong> — trigo del país molido a la piedra, a 34 km del obrador.</li>
+        <li><strong>Centeno de Sarria</strong> — integral, sin cerner, en sacos de 25 kg.</li>
+        <li><strong>Maíz de Meira</strong> — variedad del país, solo para la broa de la tarde.</li>
+      </ul>
+      <p class="trigo__nota">Todos los datos de esta página son inventados para la demostración, proveedores incluidos.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ VOCES ══════════ -->
+  <section class="voces" aria-labelledby="t-voces">
+    <h2 id="t-voces" class="voces__titulo" data-char>Lo que se dice en la cola</h2>
+    <ul class="voces__lista">
+      <li class="voz">
+        <blockquote><p>«Llego a las ocho y ya huele desde el portal. La hogaza aguanta tierna tres días, y eso no me pasaba con ninguna otra.»</p></blockquote>
+        <p class="voz__firma">Marga R. · vecina de Monte Alto</p>
+      </li>
+      <li class="voz">
+        <blockquote><p>«Pedí el pan de la cena por WhatsApp a las once y a las siete estaba en el mostrador con mi nombre en una bolsa de papel.»</p></blockquote>
+        <p class="voz__firma">Iago V. · cliente desde 2021</p>
+      </li>
+      <li class="voz">
+        <blockquote><p>«La broa me recordó a la que hacía mi abuela en Meira. La compro los viernes y la congelo en rebanadas.»</p></blockquote>
+        <p class="voz__firma">Carme D. · clienta de los viernes</p>
+      </li>
+    </ul>
+    <p class="voces__aviso">Opiniones de muestra, escritas para esta demostración. No proceden de ninguna plataforma de reseñas ni de personas reales.</p>
+  </section>
+
+  <!-- ══════════ VISITA ══════════ -->
+  <section class="visita" id="visita" aria-labelledby="t-visita">
+    <div class="seccion__cabeza">
+      <p class="indice">06 — Visítanos</p>
+      <h2 id="t-visita" data-char>Rúa da Fornalla, 7</h2>
+    </div>
+
+    <div class="visita__rejilla">
+      <div class="horario">
+        <h3>Horario del mostrador</h3>
+        <p class="horario__estado" data-estado>Comprobando el horario…</p>
+        <ul class="horario__lista" data-horario>
+          <li data-dia="2"><span class="horario__dia">Martes</span><span class="horario__franjas"><i style="--a:10%;--b:43.33%"></i><i style="--a:73.33%;--b:20%"></i></span><span class="horario__texto">07:30–14:00 · 17:00–20:00</span></li>
+          <li data-dia="3"><span class="horario__dia">Miércoles</span><span class="horario__franjas"><i style="--a:10%;--b:43.33%"></i><i style="--a:73.33%;--b:20%"></i></span><span class="horario__texto">07:30–14:00 · 17:00–20:00</span></li>
+          <li data-dia="4"><span class="horario__dia">Jueves</span><span class="horario__franjas"><i style="--a:10%;--b:43.33%"></i><i style="--a:73.33%;--b:20%"></i></span><span class="horario__texto">07:30–14:00 · 17:00–20:00</span></li>
+          <li data-dia="5"><span class="horario__dia">Viernes</span><span class="horario__franjas"><i style="--a:10%;--b:43.33%"></i><i style="--a:73.33%;--b:20%"></i></span><span class="horario__texto">07:30–14:00 · 17:00–20:00</span></li>
+          <li data-dia="6"><span class="horario__dia">Sábado</span><span class="horario__franjas"><i style="--a:13.33%;--b:43.33%"></i></span><span class="horario__texto">08:00–14:30</span></li>
+          <li data-dia="0"><span class="horario__dia">Domingo</span><span class="horario__franjas"><i style="--a:20%;--b:33.33%"></i></span><span class="horario__texto">09:00–14:00</span></li>
+          <li data-dia="1" class="horario__cerrado"><span class="horario__dia">Lunes</span><span class="horario__franjas"></span><span class="horario__texto">Cerrado</span></li>
+        </ul>
+        <p class="horario__escala" aria-hidden="true"><span>6</span><span>9</span><span>12</span><span>15</span><span>18</span><span>21</span></p>
+      </div>
+
+      <div class="donde">
+        <h3>Cómo llegar</h3>
+        <address>
+          Rúa da Fornalla, 7<br>
+          15004 · A Coruña<br>
+          <a href="tel:+34981000012">981 00 00 12</a><br>
+          <a href="mailto:hola@milmigas.example">hola@milmigas.example</a>
+        </address>
+        <p class="donde__nota">A dos minutos de la plaza de Pontevedra. Hay carga y descarga en la puerta y aparcamiento subterráneo en la calle siguiente.</p>
+        <div class="mapa" data-mapa>
+          <button class="boton boton--tinta" type="button" data-mapa-boton>Cargar el mapa de Google</button>
+          <p class="mapa__aviso">El mapa se carga solo si lo pides: hasta entonces esta web no llama a ningún servidor de terceros.</p>
+        </div>
+      </div>
+
+      <form class="encargo" id="encargo" data-encargo novalidate>
+        <h3>Encargar pan</h3>
+        <p class="encargo__texto">Se encarga hasta las 19:00 del día anterior. Guardamos el pan con tu nombre hasta el cierre.</p>
+        <p class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </p>
+        <p class="campo">
+          <label for="tel">Teléfono</label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" required>
+        </p>
+        <p class="campo">
+          <label for="que">Qué quieres y para cuándo</label>
+          <textarea id="que" name="que" rows="3" required>Una hogaza de 1 kg para el jueves a las 9</textarea>
+        </p>
+        <button class="boton boton--rojo" type="submit" data-iman>Enviar el encargo</button>
+        <p class="encargo__estado" data-encargo-estado role="status"></p>
+        <p class="encargo__demo">Formulario de muestra: no envía nada a ningún sitio ni guarda lo que escribas.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie__marca">
+    <svg class="marca__simbolo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="3"/>
+      <g fill="currentColor">
+        <circle cx="17" cy="19" r="4.2"/><circle cx="29" cy="16" r="2.6"/><circle cx="32" cy="26" r="4.8"/>
+        <circle cx="20" cy="31" r="3.4"/><circle cx="27" cy="34" r="2"/><circle cx="12" cy="28" r="2.2"/>
+        <circle cx="24" cy="24" r="1.6"/>
+      </g>
+    </svg>
+    <p class="pie__lema">Obrador de pan de masa madre<br>Rúa da Fornalla, 7 · A Coruña</p>
+  </div>
+
+  <nav class="pie__nav" aria-label="Enlaces del pie">
+    <ul>
+      <li><a href="#hornadas">Hornadas</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#visita">Visítanos</a></li>
+      <li><a href="legal.html">Aviso legal y privacidad</a></li>
+    </ul>
+  </nav>
+
+  <p class="pie__sello">
+    <strong>Sitio de demostración.</strong> Milmigas es un negocio ficticio; los datos,
+    fotografías y opiniones son de muestra. Ningún dato de esta página corresponde a un
+    negocio real. Fotografías de archivo bajo licencia Pexels, acreditadas en
+    <a href="https://github.com/alvarotaiagu/plantilla-panaderia-web/blob/main/CREDITOS.md">CREDITOS.md</a>.
+  </p>
+</footer>
+
+<div class="cookie-banner" data-cookies hidden>
+  <p>Esta web usa una única cookie técnica para recordar que has visto este aviso. No hay analítica, ni seguimiento, ni cookies de terceros: el mapa de Google solo se carga si pulsas el botón.</p>
+  <div class="cookie-banner__acciones">
+    <button class="boton boton--tinta" type="button" data-cookies-ok>Entendido</button>
+    <a class="boton boton--linea" href="legal.html#cookies">Leer más</a>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

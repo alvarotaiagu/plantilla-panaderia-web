@@ -1,0 +1,13 @@
+{
+  "name": "Milmigas · obrador de pan (demostración)",
+  "short_name": "Milmigas",
+  "description": "Plantilla de demostración para panadería y obrador. Negocio ficticio.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F3EADB",
+  "theme_color": "#F3EADB",
+  "lang": "es",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
