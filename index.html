@@ -51,9 +51,25 @@
   "disambiguatingDescription": "Negocio ficticio. Sitio de demostración."
 }
 </script>
+<!-- Sin JavaScript no hay quien levante la cortina: mejor no enseñarla. -->
+<noscript><style>.cortina { display: none !important; }</style></noscript>
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
+<!-- Cortina «greña»: el pan sube, se le hace el corte y se abre en dos. -->
+<div class="cortina cortina--pan" data-cortina aria-hidden="true">
+  <div class="cortina__hoja cortina__hoja--alta"></div>
+  <div class="cortina__hoja cortina__hoja--baja"></div>
+  <div class="cortina__centro">
+    <svg class="cortina__corte" viewBox="0 0 220 64" aria-hidden="true">
+      <path pathLength="1" d="M18 42c26-18 52-26 92-26s68 8 92 26"/>
+      <path pathLength="1" d="M52 30c18 6 34 9 58 9s40-3 58-9"/>
+    </svg>
+    <p class="cortina__marca">Milmigas</p>
+    <p class="cortina__pie">fermentando</p>
+  </div>
+</div>
+
 
 <div class="cursor" aria-hidden="true" data-cursor>
   <span class="cursor__punto"></span>

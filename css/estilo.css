@@ -158,7 +158,9 @@ a { color: inherit; }
 .hero {
   position: relative;
   min-height: 100svh;
-  padding: clamp(7rem, 14vh, 10rem) var(--marco) 3rem;
+  /* El reloj va absoluto abajo a la izquierda: el hueco de abajo tiene que
+     dar para él, o a 900 px de alto se come el segundo boton del hero. */
+  padding: clamp(7rem, 14vh, 10rem) var(--marco) clamp(8rem, 15vh, 10rem);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr);
   align-items: center;
@@ -696,6 +698,7 @@ a { color: inherit; }
   .hero { grid-template-columns: 1fr; align-content: center; }
   .hero__cuerpo { max-width: none; }
   .hero__foto { max-width: 17rem; }
+  .hero { padding-bottom: 3rem; }   /* aquí el reloj ya no es absoluto */
   .reloj { position: static; margin-top: 1.5rem; justify-self: start; }
 
   .paso { grid-template-columns: auto minmax(0, 1fr); }
@@ -740,3 +743,46 @@ a { color: inherit; }
   }
   .cursor { display: none; }
 }
+
+/* ── Cortina de entrada ────────────────────────────────────────────────
+   Obligatoria (§5 del pliego). El `display` va en `:not([hidden])`, nunca
+   en la clase a secas: si no, ganaría al atributo y la página quedaría
+   tapada para siempre —el mismo fallo que el aviso de cookies.
+   ────────────────────────────────────────────────────────────────────── */
+.cortina { position: fixed; inset: 0; z-index: 400; }
+.cortina:not([hidden]) { display: grid; place-items: center; }
+.cortina[hidden] { display: none !important; }
+.cortina__centro {
+  position: relative; z-index: 3;
+  display: grid; justify-items: center; gap: 0.9rem;
+  padding: 0 1.5rem; text-align: center;
+}
+.cortina__marca {
+  margin: 0; font-family: var(--display);
+  font-size: clamp(2.1rem, 8vw, 4.6rem); line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+.cortina__pie {
+  margin: 0; font-family: var(--mono);
+  font-size: clamp(0.6rem, 1.8vw, 0.72rem); letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+@media (prefers-reduced-motion: reduce) { .cortina { display: none !important; } }
+
+/* «La miga»: la masa sube, se le da la greña y el pan se abre por el corte. */
+.cortina--pan { background: transparent; }
+.cortina--pan .cortina__hoja {
+  position: absolute; left: 0; right: 0; height: 58%;
+  background: var(--tinta); z-index: 1;
+}
+.cortina--pan .cortina__hoja--alta {
+  top: 0; border-radius: 0 0 50% 50% / 0 0 6.5vh 6.5vh;
+}
+.cortina--pan .cortina__hoja--baja {
+  bottom: 0; border-radius: 50% 50% 0 0 / 6.5vh 6.5vh 0 0;
+}
+.cortina--pan .cortina__marca { color: var(--papel); }
+.cortina--pan .cortina__pie { color: var(--grano); }
+.cortina__corte { width: min(52vw, 20rem); height: auto; }
+.cortina__corte path { fill: none; stroke: var(--corteza); stroke-width: 3; stroke-linecap: round; }
+.has-motion .cortina__corte path { stroke-dasharray: 1; stroke-dashoffset: 1; }

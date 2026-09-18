@@ -27,6 +27,36 @@
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
+  /* ── Cortina de entrada ────────────────────────────────────────────────
+     Obligatoria (§5 del pliego) y con RETIRADA GARANTIZADA: se quita
+     siempre —sin GSAP, con movimiento reducido, o si algo falla a mitad—,
+     porque si se queda tapa la página entera. `ESPERA` es lo que el hero
+     aguanta antes de entrar, para que el relevo sea limpio.
+     ────────────────────────────────────────────────────────────────────── */
+  var ESPERA = 0;
+  (function cortina() {
+    var el = document.querySelector('[data-cortina]');
+    if (!el) return;
+    var fuera = false;
+    function quitar() { if (fuera) return; fuera = true; el.hidden = true; }
+    if (!motion) { quitar(); return; }
+    ESPERA = 1.30;
+
+    var alta = el.querySelector('.cortina__hoja--alta');
+    var baja = el.querySelector('.cortina__hoja--baja');
+    var corte = el.querySelectorAll('.cortina__corte path');
+    var centro = el.querySelector('.cortina__centro');
+    gsap.set(centro, { opacity: 0, scale: 0.94 });
+    var tl = gsap.timeline({ onComplete: quitar });
+    tl.to(centro, { opacity: 1, scale: 1, duration: 0.45, ease: 'power2.out' })
+      .to(corte, { strokeDashoffset: 0, duration: 0.5, ease: 'power2.inOut', stagger: 0.08 }, '-=0.2')
+      .to(centro, { opacity: 0, scale: 1.05, duration: 0.32, ease: 'power1.in' }, '+=0.06')
+      .to(alta, { yPercent: -101, duration: 0.85, ease: 'expo.inOut' }, '-=0.12')
+      .to(baja, { yPercent: 101, duration: 0.85, ease: 'expo.inOut' }, '<');
+    setTimeout(quitar, 5000);   // red de seguridad: pase lo que pase, se va
+  })();
+
+
   /* ─────────────────────────────────────────────────────────────────────
      1. Scroll suave (Lenis) — único motor de scroll de la página
      ───────────────────────────────────────────────────────────────────── */
@@ -214,7 +244,7 @@
       gsap.set(letras, { yPercent: 105, opacity: 0 });
       if (el.closest('.hero')) {
         // el primer titular no espera al scroll
-        gsap.to(letras, { yPercent: 0, opacity: 1, duration: 0.85, ease: 'power3.out', stagger: 0.022, delay: 0.15 });
+        gsap.to(letras, { yPercent: 0, opacity: 1, duration: 0.85, ease: 'power3.out', stagger: 0.022, delay: ESPERA + 0.15 });
         return;
       }
       gsap.to(letras, {

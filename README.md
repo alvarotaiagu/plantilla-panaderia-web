@@ -46,6 +46,17 @@ abajo), las burbujas crecen, el pan pasa y se parte, los pasos se apilan como ho
 
 ## Recursos de movimiento
 
+**0. Cortina de entrada.** **«Greña»** — la marca sube como la masa, se le da el corte encima y el pan se abre en dos: la mitad de arriba se va hacia arriba y la de abajo hacia abajo, cada una con su borde curvo de hogaza.
+
+Es obligatoria en todas las plantillas (§5 del pliego) y está hecha para no dejar la
+página tapada nunca: se retira al terminar la animación, se retira igual si el CDN de
+GSAP no carga, se retira con `prefers-reduced-motion` y hay además un `setTimeout` de
+5 s de red de seguridad. El `display` va en `.cortina:not([hidden])`, nunca en
+`.cortina` a secas —si fuera a secas ganaría al atributo `hidden` y no se iría jamás.
+El hero no entra hasta que la cortina va por la mitad (la constante `ESPERA` de
+`main.js`), para que el relevo se vea como una sola cosa y no como dos animaciones
+pegadas.
+
 1. **Lenis** como único motor de scroll (`lerp: 0.17`, subido a propósito por la
    galería horizontal).
 2. **Canvas de fermentación** en el hero — el recurso protagonista.
@@ -71,6 +82,10 @@ El hero es un canvas vivo, así que se midió con `PerformanceObserver` de `long
 
 Para repetir la medida hace falta observar `longtask` **antes** de cargar la página
 (`addInitScript`), o las entradas del arranque se pierden.
+
+- **La cortina no añade tarea larga propia**: en la medición con cortina la tarea de
+  arranque es de **147 ms**, del mismo orden que antes de ponerla, porque el gesto son
+  transformaciones y opacidades, sin `blur` ni sombras por fotograma.
 
 ## Cómo reskinearlo a un cliente real
 
